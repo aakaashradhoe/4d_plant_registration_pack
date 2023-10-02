@@ -1,4 +1,6 @@
 # Spatio-temporal registration point clouds of plants
+The original repository is available at [here](https://github.com/PRBonn/4d_plant_registration .
+
 
 In this project, we develop techniques for registration of point clouds of plants over space and time.
 This is a challenging task due to the growth of the plant and the change in the structure and the 
@@ -7,23 +9,6 @@ to compute and find correspondences between the skeletons structures of the plan
 correspondences to estimate non-rigid registration parameters between the plant scans. This technique
 forms the basis for developing automated phenotyping analysis such as monitoring the growth
 and the overall performance of a plant. 
-
-## Setup
-
-The project depends on the following external packages:
-
-- numpy
-- matplotlib
-- scikit-learn
-- minisom
-- dijkstar
-- open3d (for loading and visualizing ply files)
-- jupyter-lab/jupyter-notebook (for running the demo notebook)
-
-They can be installed by running:
-```bash
-pip3 install -r requirements.txt
-```
 
 ## Usage
 
