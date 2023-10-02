@@ -12,6 +12,10 @@ and the overall performance of a plant.
 
 ## Usage
 
+Before launch any of the files, simply install the python package doing 
+    
+``` pip install . ```
+
 We provide a demonstration of the overall registration approach on example scans of maize and tomato plants.
 The demo can be run via the the jupyter notebook ``` spatio_temporal_registration.ipynb ``` 
 
@@ -80,10 +84,4 @@ downloaded from:
 
 https://www.ipb.uni-bonn.de/data/4d-plant-registration/
 
-## License
 
-Copyright 2020, Nived Chebrolu, Federico Magistri, Thomas Läbe, Cyrill Stachniss, University of Bonn. This project is a free software made available under the MIT License. For details see the LICENSE file.
-
-## Acknowledgements
-
-This work has been partly funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy, EXC-2070 - 390732324 - PhenoRob.
