@@ -6,16 +6,19 @@ This script provides a demo for estimating the non-rigid registration parameters
 from plant_registration import skeleton as skel
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 from plant_registration import skeleton_matching as skm
 from plant_registration import non_rigid_registration as nrr
 from plant_registration import visualize as vis
 
+# source directory
+path_file = os.path.dirname(os.path.realpath(__file__))
 # %% load skeleton data and correpondences (matching results)
 species = 'maize'
 day1 = '03-13'
 day2 = '03-14'
-skel_path = '../data/{}/{}.graph.txt'
-corres_path = '../data/{}/{}-{}.corres.txt'
+skel_path = path_file + '/data/{}/{}.graph.txt'
+corres_path = path_file + '/data/{}/{}-{}.corres.txt'
 S1 = skel.Skeleton.read_graph(skel_path.format(species, day1))
 S2 = skel.Skeleton.read_graph(skel_path.format(species, day2))
 corres = np.loadtxt(corres_path.format(species, day1, day2), dtype = np.int32)
