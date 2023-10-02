@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import numpy as np
-
-import skeleton as skel
-import skeleton_matching as skm
-import non_rigid_registration as nrr
 import matplotlib.pyplot as plt
-import visualize as vis
+
+
+from plant_registration import skeleton as skel
+from plant_registration import skeleton_matching as skm
+from plant_registration import non_rigid_registration as nrr
+from plant_registration import visualize as vis
 
 def iterative_registration(S1, S2, params):
   """

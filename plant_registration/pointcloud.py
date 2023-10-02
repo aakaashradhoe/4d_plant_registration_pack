@@ -3,7 +3,7 @@
 import numpy as np
 import pathlib
 
-import helperfunctions as hf
+from plant_registration import helperfunctions as hf
 
 def deform_pointcloud(P1, T12, corres, S1, S2):
   """

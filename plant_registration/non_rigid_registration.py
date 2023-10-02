@@ -5,11 +5,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from collections import namedtuple
 
-import skeleton as skel
-import skeleton_matching as skm
-import robust_functions as rf
-import helperfunctions as hf
-import visualize as vis
+from plant_registration import skeleton as skel
+from plant_registration import skeleton_matching as skm
+from plant_registration import robust_functions as rf
+from plant_registration import helperfunctions as hf
+from plant_registration import visualize as vis
 
 Obs = namedtuple('Observation', 'g q')
 

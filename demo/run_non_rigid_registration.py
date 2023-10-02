@@ -3,12 +3,12 @@
 """
 This script provides a demo for estimating the non-rigid registration parameters between a pair of skeletons.
 """
-import skeleton as skel
+from plant_registration import skeleton as skel
 import numpy as np
 import matplotlib.pyplot as plt
-import skeleton_matching as skm
-import non_rigid_registration as nrr
-import visualize as vis
+from plant_registration import skeleton_matching as skm
+from plant_registration import non_rigid_registration as nrr
+from plant_registration import visualize as vis
 
 # %% load skeleton data and correpondences (matching results)
 species = 'maize'

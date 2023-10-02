@@ -2,7 +2,7 @@ import numpy as np
 import open3d as o3d
 from sklearn.neighbors import KNeighborsClassifier
 
-import skeleton as skel
+import plant_registration.skeleton as skel
 
 
 def removeOutliers(array, std_ratio=0.5):
@@ -33,7 +33,7 @@ def computeHistograms(pcd):
     :return: FPFH, xyz coordinates
     """
     pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=2.5, max_nn=30))
-    pcd_fpfh = o3d.registration.compute_fpfh_feature(pcd, o3d.geometry.KDTreeSearchParamRadius(radius=5))
+    pcd_fpfh = o3d.pipelines.registration.compute_fpfh_feature(pcd, o3d.geometry.KDTreeSearchParamRadius(radius=5))
     return np.asarray(pcd_fpfh.data).T, np.asarray(pcd.points)
 
 
@@ -106,7 +106,7 @@ def getLeaves(xyz, labels):
                 points.append(xyz[i])
 
         leaves.append(points)
-    return np.asarray(leaves), keep_labels
+    return np.asarray(leaves,dtype=object ), keep_labels
 
 
 def convertEdgesFormat(points, graph):

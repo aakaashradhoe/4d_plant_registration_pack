@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from dijkstar import Graph, find_path
-import skeleton as skel
+from plant_registration import skeleton as skel
 
 def skeleton_matching(S1, S2, params):
   """

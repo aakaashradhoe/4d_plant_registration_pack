@@ -3,20 +3,21 @@
 """
 This script provides a demo for iterative non-rigid registration procedure between a pair of skeletons.
 """
-
-import skeleton as skel
 import numpy as np
 import matplotlib.pyplot as plt
-import skeleton_matching as skm
-import non_rigid_registration as nrr
-from iterative_registration import iterative_registration
-import visualize as vis
-
+from plant_registration import skeleton as skel
+from plant_registration import skeleton_matching as skm
+from plant_registration import non_rigid_registration as nrr
+from plant_registration.iterative_registration import iterative_registration
+from plant_registration import visualize as vis
+import os
+# source directory
+path_file = os.path.dirname(os.path.realpath(__file__))
 # %% load skeleton data
 species = 'maize'
 day1 = '03-13'
 day2 = '03-14'
-skel_path = '../data/{}/{}.graph.txt'
+skel_path = path_file + '/data/{}/{}.graph.txt'
 S1 = skel.Skeleton.read_graph(skel_path.format(species, day1))
 S2 = skel.Skeleton.read_graph(skel_path.format(species, day2))
 
